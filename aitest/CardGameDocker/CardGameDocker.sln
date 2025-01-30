@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "my-csharp-docker-app", "my-csharp-docker-app", "{D8333BDB-0DC6-F831-2422-0C8A28023507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "my-csharp-docker-app", "my-csharp-docker-app\src\my-csharp-docker-app.csproj", "{FF0F0115-DA39-1B02-7FE4-3B2924542453}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF0F0115-DA39-1B02-7FE4-3B2924542453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0F0115-DA39-1B02-7FE4-3B2924542453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0F0115-DA39-1B02-7FE4-3B2924542453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0F0115-DA39-1B02-7FE4-3B2924542453}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF0F0115-DA39-1B02-7FE4-3B2924542453} = {D8333BDB-0DC6-F831-2422-0C8A28023507}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {760C4673-060C-42F5-A634-8B88A8D05E28}
+	EndGlobalSection
+EndGlobal

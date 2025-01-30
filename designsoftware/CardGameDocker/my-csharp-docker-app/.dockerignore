@@ -1,0 +1,15 @@
+# FILE: /my-csharp-docker-app/my-csharp-docker-app/.dockerignore
+bin/
+obj/
+*.user
+*.suo
+*.sln
+*.csproj.user
+*.csproj.lock
+*.ncrunch*
+*.ide
+*.log
+*.vs/
+.vscode/
+Dockerfile
+README.md

@@ -1,0 +1,20 @@
+@exercise2WeatherApi_HostAddress = http://localhost:5111
+@ContosoPizza_HostAddress = http://localhost:5111
+
+
+GET {{exercise2WeatherApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+
+// herunder er det kun id 1 det bliver hentet
+GET {{ContosoPizza_HostAddress}}/pizza/1
+Accept: application/json
+
+###
