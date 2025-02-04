@@ -1,0 +1,19 @@
+# See https://docs.gitlab.com/ee/ci/testing/unit_test_report_examples.html
+# Complete reference here: https://docs.gitlab.com/ee/ci/yaml/index.html
+image: mcr.microsoft.com/dotnet/sdk:8.0
+build-and-test:
+  stage: test
+  variables:
+    GIT_STRATEGY: clone
+  before_script:
+    - 'dotnet restore'
+  script:
+    - 'dotnet clean'
+    - 'dotnet build'
+    - 'dotnet test --logger:"junit;MethodFormat=Class;FailureBodyFormat=Verbose"'
+  artifacts:
+    when: always
+    untracked: true
+    reports:
+      junit:
+        - ./**/TestResults.xmlis this right for testting?

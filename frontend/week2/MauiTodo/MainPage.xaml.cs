@@ -1,4 +1,6 @@
-﻿namespace MauiApp1;
+﻿
+
+namespace MauiTodo;
 
 public partial class MainPage : ContentPage
 {
@@ -12,7 +14,6 @@ public partial class MainPage : ContentPage
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
-		count++;
 
 		if (count == 1)
 			CounterBtn.Text = $"Clicked {count} time";
@@ -22,4 +23,3 @@ public partial class MainPage : ContentPage
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
-
