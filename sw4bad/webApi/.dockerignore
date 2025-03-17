@@ -1,0 +1,42 @@
+# Ignore bin and obj folders (compiled files)
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.vspscc
+*.vssscc
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.cache
+
+# Ignore logs and temp files
+*.log
+logs/
+tmp/
+temp/
+
+# Ignore build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.pid
+*.swp
+*.lock
+*.gz
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables and secrets
+.env
+secrets.json
+
+# Ignore Docker-related files (if unnecessary)
+.dockerignore
+Dockerfile

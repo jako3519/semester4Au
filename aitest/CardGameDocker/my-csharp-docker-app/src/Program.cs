@@ -10,11 +10,9 @@ namespace MyCSharpDockerApp
 {
     class Program
     {
-        static double omsaetning = 0;
-
         static async Task Main(string[] args)
         {
-            string url = "http://127.0.0.1:1234/v1/chat/completions"; // Correct API endpoint
+            string url = "http://127.0.0.1:1234/v1/chat/completions"; 
 
             while (true)
             {
@@ -38,21 +36,15 @@ namespace MyCSharpDockerApp
                     continue;
                 }
 
-                if (userQuestion.ToLower() == "omsaetning")
-                {
-                    funktioner.Omsaetning(ref omsaetning);
-                    continue;
-                }
-
                 var requestData = new
                 {
-                    model = "llama-3.2-1b-instruct", // Model ID from API response
+                    model = "llama-3.2-1b-instruct", // LLM Model 
                     messages = new[]
                     {
-                        new { role = "system", content = "You are an AI assistant." },
-                        new { role = "user", content = $"{userQuestion}. Current omsaetning: {omsaetning}" }
+                        new { role = "system", content = "Du er en Ai chatbot" },
+                        new { role = "user", content = userQuestion }
                     },
-                    temperature = 0.7
+                    
                 };
 
                 string jsonRequest = JsonConvert.SerializeObject(requestData);
@@ -73,7 +65,7 @@ namespace MyCSharpDockerApp
 
     class funktioner
     {
-        public static List<string> Options = new List<string> { "test", "muligheder", "omsaetning" };
+        public static List<string> Options = new List<string> { "test", "muligheder" };
 
         public static void Muligheder()
         {
@@ -86,12 +78,6 @@ namespace MyCSharpDockerApp
         public static void Test()
         {
             Console.WriteLine("Hello World");
-        }
-
-        public static void Omsaetning(ref double omsaetning)
-        {
-            omsaetning = 1000;
-            Console.WriteLine($"Omsaetning sat til {omsaetning}kr");
         }
     }
 }

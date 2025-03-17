@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="selectPictures.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            
+            <Label Text="Her kan der tilføjes Billeder"
+                   Style="{StaticResource Headline}"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <HorizontalStackLayout Spacing="15">
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="Vælg Billede" Clicked="ChosePictureClicked" />
+                    <Entry x:Name="titel" Placeholder="Titel" />
+                    <Editor x:Name="beskrivelse" Placeholder="Indtast Billede Beskrivelse" />
+                    <Button Text="Tilføj Billede" Clicked="OnAddPictureClicked" />
+                </VerticalStackLayout>
+
+                <Image x:Name="selectedImage"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       Aspect="AspectFill"
+                       BackgroundColor="LightGray"/>
+            </HorizontalStackLayout>
+
+            <CollectionView ItemsSource="{Binding Images}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5" BackgroundColor="Black">
+                            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image Source="{Binding FilePath}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                                <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" FontSize="Small"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
